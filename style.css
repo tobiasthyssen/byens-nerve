@@ -1,0 +1,17 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family: helvetica, arial, sans-serif;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow:hidden;
+  margin: 0;
+}
