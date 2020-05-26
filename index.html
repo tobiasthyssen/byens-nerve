@@ -8,14 +8,83 @@
 
     <title>Byens Nerve</title>
 
+    <!-- Vendor stylesheets -->
+    <link
+      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
     <!-- import the webpage's stylesheet -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- Vendor scripts -->
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.min.js"></script>
 
     <!-- import the webpage's javascript file -->
     <script src="script.js" defer></script>
   </head>
   <body>
+    <div class="mdc-touch-target-wrapper app-fab--absolute">
+      <button class="mdc-icon-button material-icons icon-info">info</button>
+      <button
+        class="mdc-fab mdc-fab--mini mdc-fab--touch hidden--fullscreen icon-fullscreen"
+        aria-label="Fullscreen"
+      >
+        <div class="mdc-fab__ripple"></div>
+        <span class="mdc-fab__icon material-icons">fullscreen</span>
+      </button>
+    </div>
+    <div class="mdc-dialog">
+      <div class="mdc-dialog__container">
+        <div
+          class="mdc-dialog__surface"
+          role="alertdialog"
+          aria-modal="true"
+          aria-labelledby="my-dialog-title"
+          aria-describedby="my-dialog-content"
+        >
+          <h2 class="mdc-dialog__title" id="my-dialog-title">Byens Nerve: Et billedkunstprojekt</h2>
+          <div class="mdc-dialog__content" id="my-dialog-content">
+            <p><i>Af Tobias Thyssen</i></p>
+            <p>
+              Dette værk er udformet i forbindelse med min eksamen i billedkunst
+              på Læreruddannelsen i Aarhus.
+            </p>
+            <p>
+              Værket tager udgangspunkt i offentligt tilgængeligt trafikdata fra
+              Aarhus Kommune. Dataen er stillet til rådighed gennem
+              <a
+                href="https://www.opendata.dk/city-of-aarhus/realtids-trafikdata"
+                target="_blank"
+                >opendata.dk</a
+              >
+              og opdateres hvert 5. minut med realtidsmålinger fra ca. 400
+              målepunkter fordelt udover Aarhus Kommune.
+            </p>
+            <p>
+              Hver prik svarer til et trafikmålepunkt i Aarhus Kommune.
+              Størrelsen afhænger af hvor mange biler der har passeret punktet,
+              og farven er afgjort af bilernes gennemsnitlige hastighed. Derfor
+              vil værket også ændre udtryk alt efter hvornår på dagen det ses.
+            </p>
+            <p>
+              Koden er offentligt tilgængeligt på
+              <a
+                href="https://github.com/tobiasthyssen/byens-nerve"
+                target="_blank"
+                >github.com/tobiasthyssen/byens-nerve</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="mdc-dialog__scrim"></div>
+    </div>
   </body>
 </html>
+

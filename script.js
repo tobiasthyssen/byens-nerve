@@ -1,5 +1,15 @@
 /* global createCanvas, noLoop, noStroke, ellipse, random, windowWidth, windowHeight, fill, text, rect, redraw, resizeCanvas, background */
 
+/*
+
+TODO:
+- Change blue to green
+- Tweak background color
+- Title and description. Maybe emojis for title for cheapass favicon
+- Add description tooltip
+- Add fullscreen button
+*/
+
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
   noLoop();
@@ -23,9 +33,7 @@ function draw() {
   }
   *
   */
-  fetch(
-    "https://admin.opendata.dk/api/3/action/datastore_search?resource_id=b3eeb0ff-c8a8-4824-99d6-e0a3747c8b0d&sort=_id+asc&limit=1000"
-  )
+  fetch("https://admin.opendata.dk/api/3/action/datastore_search?resource_id=b3eeb0ff-c8a8-4824-99d6-e0a3747c8b0d&sort=_id+asc&limit=1000")
     .then(response => response.json())
     .then(data => {
       var data = data.result.records;
@@ -43,7 +51,7 @@ function draw() {
           // Blue
           fill(14, 48, 99, opacity);
         } else if (entry.avgSpeed < 100) {
-          // Red
+          //Red
           fill(149, 10, 29, opacity);
         } else {
           //Yellow
@@ -58,9 +66,17 @@ function draw() {
     });
 }
 
-function mousePressed() {
-  openFullscreen();
-  redraw(5);
+function mousePressed(e) {
+  if (e.target.innerText === "fullscreen") {
+    openFullscreen();
+    redraw();
+  }
+
+  if (e.target.innerText === "info") {
+    const MDCDialog = mdc.dialog.MDCDialog;
+    const dialog = new MDCDialog(document.querySelector(".mdc-dialog"));
+    dialog.open();
+  }
 }
 
 function windowResized() {
