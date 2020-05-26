@@ -15,3 +15,38 @@ html, body {
   overflow:hidden;
   margin: 0;
 }
+
+.hidden {
+  display: none;
+}
+
+.app-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+
+:fullscreen .hidden--fullscreen {
+  display: none;
+}
+
+.icon-info {
+  color: #fff
+}
+
+.icon-fullscreen {
+  color: inherit;
+  background-color: #fff;
+}
+
+
+.icon-info,
+.icon-fullscreen {
+  opacity: 10%
+}
+
+.icon-info:hover,
+.icon-fullscreen:hover {
+  opacity: 75%;
+}
