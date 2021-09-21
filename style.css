@@ -1,5 +1,3 @@
-/* CSS files add styling rules to your content */
-
 body {
   font-family: helvetica, arial, sans-serif;
 }
@@ -22,31 +20,15 @@ html, body {
 
 .app-fab--absolute {
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-}
-
-
-:fullscreen .hidden--fullscreen {
-  display: none;
+  bottom: 16px;
+  right: 16px;
 }
 
 .icon-info {
-  color: #fff
+  opacity: 10%;
+  color: #fff;
 }
 
-.icon-fullscreen {
-  color: inherit;
-  background-color: #fff;
-}
-
-
-.icon-info,
-.icon-fullscreen {
-  opacity: 10%
-}
-
-.icon-info:hover,
-.icon-fullscreen:hover {
+.icon-info:hover {
   opacity: 75%;
 }
