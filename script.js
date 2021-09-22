@@ -1,14 +1,3 @@
-/* global createCanvas, noLoop, noStroke, ellipse, random, windowWidth, windowHeight, fill, text, rect, redraw, resizeCanvas, background */
-
-/*
-
-TODO:
-- Change blue to green
-- Tweak background color
-- Title and description. Maybe emojis for title for cheapass favicon
-- Add description tooltip
-- Add fullscreen button
-*/
 
 function setup() {
   createCanvas(window.innerWidth, window.innerHeight);
@@ -67,11 +56,6 @@ function draw() {
 }
 
 function mousePressed(e) {
-  if (e.target.innerText === "fullscreen") {
-    openFullscreen();
-    redraw();
-  }
-
   if (e.target.innerText === "info") {
     const MDCDialog = mdc.dialog.MDCDialog;
     const dialog = new MDCDialog(document.querySelector(".mdc-dialog"));
